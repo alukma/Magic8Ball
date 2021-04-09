@@ -1,1 +1,75 @@
-!
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="bola-8, magic 8 ball, desarollo web">
+  <meta name="author" content="Nicolas Morresi">
+  <link rel="stylesheet" href="style.css">
+  <title>Magic 8 Ball</title>
+
+</head>
+
+<body>
+  <header>
+    <h1>Magic 8 Ball</h1>
+  </header>
+  <section>
+    <div class="contenedor">
+      <!-- crea imágen SVG (esto es solamente practica, la MEJOR manera de hacerlo es con un algún programa o framework)-->
+      <svg width="300" height="300" id="bola">
+        <!-- creación de un gradiente para darle un reflejo a la bola -->
+        <defs>
+          <linearGradient id="grad1" x1="40%" y1="50%" x2="10%" y2="0%">
+            <stop offset="0%" style="stop-color:rgb(0, 0, 0);stop-opacity:1" />
+            <stop offset="100%" style="stop-color:rgb(255, 255, 255);stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <!-- creación de la bola y elementos ocultos -->
+        <circle cx="150" cy="150" r="140" stroke="black" stroke-width="0" fill="url(#grad1)" />
+        <circle cx="150" cy="150" r="70" stroke="black" stroke-width="0" fill="white" id="fondo" />
+        <text x="125" y="175" fill="black" style="font-size: 80px;" id="texto">8</text>
+
+        <!-- quise hacer un triángulo equilátero con el elemento Polygon pero no pude ¯\_(ツ)_/¯ -->
+      </svg>
+      <div id="derecha">
+        <div id="respuesta">ASD</div>
+        <input type="text" id="pregunta" placeholder="Pregunta lo que quieras!">
+        <button type="button" onclick="responder()">Respuesta</button>
+      </div>
+    </div>
+    <article>
+      <h2>¿Qué es Magic 8-Ball?</h2>
+      <p>La Magic 8-Ball (en español Bola 8 Mágica) es un juguete usado para echar la fortuna o buscar consejo
+        diseñado por Mattel. Este objeto fue inventado en 1946 por Albert Carter, hijo de un vidente, el cual lo
+        comercializó y vendió junto con Abe Bookman en Alabe Crafts Company (la empresa fue llamada así para
+        hacer
+        referencia a las primeras letras del nombre de ambos). Aunque Carter es el inventor, a menudo se
+        atribuye la
+        invención del juguete a Bookman.</p>
+    </article>
+    <hr>
+    <article>
+      <h2>El propósito....</h2>
+      <p>El propósito de este página es solamente para practicar,
+        las técnicas para la creación de un documento con las técnologias: html, css y javascript.</p>
+
+    </article>
+    <article>
+      <p>Enlaces: </p>
+      <ul>
+        <li><a href="https://es.wikipedia.org/wiki/HTML" target="_blank">html</a> </li>
+        <li> <a href="https://es.wikipedia.org/wiki/JavaScript" target="_blank">javascript</a></li>
+        <li><a href="https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada" target="_blank">css</a></li>
+      </ul>
+    </article>
+  </section>
+  <footer>
+    <p><small>&#169;Copyright 2021 Ecus (ponele)</small></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
